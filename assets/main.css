@@ -1,0 +1,228 @@
+/* Navbar */
+.nav{
+    min-height: 42px;
+    background-color: rgb(87, 55, 177);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.nav-list{
+    padding-left: 0;
+    margin: auto 16px;
+
+}
+
+.nav-item{
+    color: #fff;
+    list-style: none;
+    margin: 0 8px;
+    display: inline-block;
+}
+
+/* <!-- Form layout--> */
+.form_row{
+    padding: 8px 0;
+    display: flex;
+
+}
+
+.form_label{
+    min-width: 90px;
+}
+
+.form_input{
+    flex: 1;
+}
+
+.form_container{
+    margin-top: 20px;
+    background-color: #fff;
+   
+}
+
+.form{
+    margin: 0 20%;
+    padding: 20px;
+    background-color: rgb(107, 105, 105);
+}
+
+/* Column layout */
+
+.column-layout{
+    margin-top: 36px;
+    padding: 12px 0px;
+    background-color: #fff(224, 224, 214);
+    display: flex;  /* Cho lên 1 hàng ngang */
+}
+
+.column-item{
+    padding: 0 16px;
+    flex: 1;  /* Chọn chiếm mấy phần */
+
+}
+
+.sidebar-one{
+    flex: 1; /**/
+    order: 1; /*Sắp sếp thứ tự theo ý muốn*/
+    background-color:antiquewhite;
+
+}
+.sidebar-tow{
+    flex: 3;
+    order: 3;
+    background-color: bisque;
+}
+.sidebar-column{
+    flex: 1;
+    order: 2;
+    background-color: aquamarine;
+}
+
+/*  <!-- Feature layout --> */
+
+.feature-layout{
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column; /**/
+    justify-content: space-around;
+}
+
+/* PC,  /* --Hàm điện kiện  */ 
+@media (min-width: 740px){
+    .feature-layout{
+        flex-direction: row;
+    }
+}
+
+.feature-item{
+    padding: 12px 16px;
+    margin-top: 16px;
+    flex-basis: 25%;
+}
+
+.feature-item:nth-child(1){
+    background-color: rgb(53, 58, 58);
+}
+.feature-item:nth-child(2){
+    background-color: rgb(33, 88, 88);
+}
+
+.feature-item:nth-child(3){
+    background-color: rgb(155, 148, 179);
+}
+
+/*  <!-- Wrap layout --> */
+
+.wrap-layout{
+    background-color: #fff;
+    margin-top: 36px;
+    padding: 12px 0 32px 0;
+    display: flex;
+    justify-content: space-around;  /* tách các ô cột ra xa nhau */
+    flex-wrap: wrap;
+}
+
+.wrap-layout-item{
+    width: 148px;
+    height: 90px;
+    color: rgb(152, 203, 238)(235, 11, 11);
+    text-align: center;
+    line-height: 90px;
+    font-style: 50px;
+    font-weight: 700;
+    margin-top: 20px;
+    background-color: rgb(252, 9, 9);
+}
+
+/*Center-layout*/
+.center-layout{
+    background-color: aqua;
+    margin: 20px auto 0 auto;
+    padding: 20px 0; 
+    max-width: 600px;
+    height: 300px;
+    display: flex;  /* Lên cùng một hàng*/
+}
+
+.center-layout-item{
+    font-size: 42px;
+    font-weight: 700px;
+    margin: auto;
+    
+}
+
+.center{
+   background-color: rgb(160, 157, 163);
+   padding: 20px 30px; /* cách lề ngoài*/
+}
+
+/* Chart layout */
+
+.chart-layout{
+    margin:auto;
+    padding: 32px 0;
+    height: 320px;
+    background-color: rgb(240, 229, 229);
+    display: flex;  /* Lên cùng một hàng*/
+    justify-content: space-around; /* tách các ô cột ra xa nhau */
+ /* align-items: flex-end; /* Đảo ngược lại */
+}
+
+.chart-layout-item{
+    align-self: flex-end; /* Đảo ngược lại */
+    width: 60px;
+    color: #fff;
+    text-align: center;
+    height: var(--percent); /*Lấy giá trị trong style chúng ta truyền vào*/
+    background-color:blue;
+    animation: growth ease-in 1s; /* thời gian chuyển động*/
+}
+
+@keyframes growth{  /* Hàm tính toán */
+    from{
+        opacity: 0;
+        height: calc(var(--percent)- 50%); /* giá trị chúng ta truyền vào - 50%*/
+    }
+    to{
+        opacity: 1;
+        height: var(--percent); /* giá trị chúng ta truyền vào*/
+    }
+}
+
+/* End */
+.the-end{
+    background-color: rgb(126, 149, 170);
+    display: flex;  /* Lên một hàng */
+    margin: 12px auto 48px auto;
+    padding: 32px 20%;
+    max-width: 740px; /* Quy định kính thước lớn nhất*/
+    min-height: 360px;/* Quy định kính thước nhỏ nhất*/
+   /* flex-direction: row-reverse; /*Hoán đổi vị trí các ô*/
+}
+
+.the-end_first{
+    padding: 4px 16px;
+    background-color: rgb(243, 240, 36);
+    flex: 1; /*Chỉnh chiếm bao nhiêu phần*/
+}
+
+.the-end_second{
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* chọn lại thành chiều dọc */
+   
+}
+
+.the-end_second-one{
+    flex: 1;
+    padding: 4px 16px; 
+    background-color: rgb(238, 115, 201);
+}
+
+.the-end_second-tow{
+    flex: 1;
+    padding: 4px 16px;
+    background-color: rgb(38, 98, 167);
+    
+}
